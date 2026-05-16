@@ -46,6 +46,7 @@
     "dev:setup": "bash scripts/setup-dev-env.sh"
   },
   "dependencies": {
+    "@arcab-aster/aster-fonts": "1.0.4",
     "react": "19.2.6",
     "react-dom": "19.2.6"
   },

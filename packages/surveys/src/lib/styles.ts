@@ -79,7 +79,13 @@ export const addCustomThemeToDom = ({ styling }: { styling: TWorkspaceStyling | 
   }
 
   // Start the innerHTML string with #fbjs
-  let cssVariables = "#fbjs {\n";
+  let cssVariables = "#fbjs {\n  font-family: 'AsterMono', monospace !important;\n";
+  cssVariables += "--fb-element-headline-font-family: 'AsterMono', monospace;\n";
+  cssVariables += "--fb-element-description-font-family: 'AsterMono', monospace;\n";
+  cssVariables += "--fb-label-font-family: 'AsterMono', monospace;\n";
+  cssVariables += "--fb-input-font-family: 'AsterMono', monospace;\n";
+  cssVariables += "--fb-button-font-family: 'AsterMono', monospace;\n";
+  cssVariables += "--fb-option-font-family: 'AsterMono', monospace;\n";
 
   // Helper function to append the variable if it's not undefined
   const appendCssVariable = (variableName: string, value?: string | null) => {

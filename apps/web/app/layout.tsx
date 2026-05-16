@@ -15,10 +15,10 @@ import "../modules/ui/globals.css";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Formbricks",
-    default: "Formbricks",
+    template: "%s | Arcab Forms",
+    default: "Arcab Forms",
   },
-  description: "Open-Source Survey Suite",
+  description: "Powerful forms and surveys for modern teams.",
 };
 
 const RootLayout = async ({ children }: { children: React.ReactNode }) => {

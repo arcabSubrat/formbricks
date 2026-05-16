@@ -1,4 +1,5 @@
 import { getServerSession } from "next-auth";
+import Image from "next/image";
 import { redirect } from "next/navigation";
 import { Toaster } from "react-hot-toast";
 import { getIsFreshInstance } from "@/lib/instance/service";
@@ -19,14 +20,28 @@ export const AuthLayout = async ({ children }: { children: React.ReactNode }) =>
   if (isFreshInstance && !isMultiOrgEnabled) {
     redirect("/setup/intro");
   }
+
   return (
     <>
       <Toaster />
-      <div className="min-h-screen bg-slate-50">
-        <div className="isolate bg-white">
-          <div className="flex min-h-screen bg-gradient-radial from-slate-200 to-slate-50">{children}</div>
+      <section className="relative min-h-dvh">
+        <div
+          className="absolute inset-x-0 top-0 z-0 hidden h-[40vh] bg-repeat sm:block"
+          style={{ backgroundImage: "url('/images/main-login-bg.svg')", backgroundSize: "auto" }}
+        />
+        <div className="relative z-10 flex min-h-screen items-center justify-center sm:pb-[20vh]">
+          {children}
         </div>
-      </div>
+        <div className="fixed bottom-24 left-1/2 z-10 flex h-[24px] w-[118px] -translate-x-1/2 items-center justify-center">
+          <Image
+            src="/images/login-footer-logo.svg"
+            alt="arcab logo"
+            className="invert-0 dark:invert"
+            width={120}
+            height={120}
+          />
+        </div>
+      </section>
     </>
   );
 };

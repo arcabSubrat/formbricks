@@ -10,7 +10,7 @@ export const FormWrapper = ({ children }: FormWrapperProps) => {
       <div className="mx-auto w-full max-w-sm rounded-xl bg-white p-8 shadow-2xl lg:w-96">
         <div className="mb-8 flex items-center justify-center gap-2">
           <Logo className="w-8" />
-          <span className="text-3xl font-semibold text-slate-900">Arcab Forms</span>
+          <span className="text-3xl font-semibold text-slate-900">Arcab Form</span>
         </div>
         {children}
       </div>

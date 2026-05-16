@@ -1,6 +1,6 @@
 import Avatar from "boring-avatars";
 
-const colors = ["#00C4B8", "#ccfbf1", "#334155"];
+const colors = ["#0000FF", "#e0e0ff", "#334155"];
 
 interface PersonAvatarProps {
   personId: string;

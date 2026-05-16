@@ -53,6 +53,7 @@ import {
   DropdownMenuTrigger,
 } from "@/modules/ui/components/dropdown-menu";
 import { GoBackButton } from "@/modules/ui/components/go-back-button";
+import { Logo } from "@/modules/ui/components/logo";
 import { ModalButton } from "@/modules/ui/components/upgrade-prompt";
 import { CreateWorkspaceModal } from "@/modules/workspaces/components/create-workspace-modal";
 import { WorkspaceLimitModal } from "@/modules/workspaces/components/workspace-limit-modal";
@@ -495,7 +496,10 @@ export const MainNavigation = ({
                       "flex items-center justify-center transition-opacity duration-100",
                       isTextVisible ? "opacity-0" : "opacity-100"
                     )}>
-                    <span className="text-lg font-bold text-slate-900">Arcab Forms</span>
+                    <div className="flex items-center gap-2">
+                      <Logo className="h-6 w-6" />
+                      <span className="text-lg font-bold text-slate-900">Arcab Form</span>
+                    </div>
                   </Link>
                 )}
                 <Button

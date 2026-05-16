@@ -19,7 +19,6 @@ import {
   UserCircleIcon,
   UserIcon,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState, useTransition } from "react";
@@ -34,7 +33,6 @@ import {
 import { NavigationLink } from "@/app/(app)/workspaces/[workspaceId]/components/NavigationLink";
 import { SettingsSidebarContent } from "@/app/(app)/workspaces/[workspaceId]/components/SettingsSidebarContent";
 import { isNewerVersion } from "@/app/(app)/workspaces/[workspaceId]/lib/utils";
-import FBLogo from "@/images/formbricks-wordmark.svg";
 import { cn } from "@/lib/cn";
 import { getBillingFallbackPath } from "@/lib/membership/navigation";
 import { getAccessFlags } from "@/lib/membership/utils";
@@ -497,7 +495,7 @@ export const MainNavigation = ({
                       "flex items-center justify-center transition-opacity duration-100",
                       isTextVisible ? "opacity-0" : "opacity-100"
                     )}>
-                    <Image src={FBLogo} width={160} height={30} alt={t("workspace.formbricks_logo")} />
+                    <span className="text-lg font-bold text-slate-900">Arcab Forms</span>
                   </Link>
                 )}
                 <Button

@@ -607,9 +607,9 @@
           "link_and_email_surveys_description": "Reach people anywhere online."
         },
         "mode": {
-          "formbricks_cx": "Formbricks CX",
+          "formbricks_cx": "Arcab CX",
           "formbricks_cx_description": "Surveys and reports to understand what your customers need.",
-          "formbricks_surveys": "Formbricks Surveys",
+          "formbricks_surveys": "Arcab Surveys",
           "formbricks_surveys_description": "Multi-purpose survey platform for web, app and email surveys.",
           "what_are_you_here_for": "What would you like to set up first?"
         },

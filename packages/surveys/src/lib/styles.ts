@@ -427,6 +427,7 @@ export const addCustomThemeToDom = ({ styling }: { styling: TWorkspaceStyling | 
   }
   // Arcab nuclear overrides for survery elements to be black
   cssVariables += "#fbjs .label-card { text-transform: uppercase !important; }\n";
+  cssVariables += "#fbjs button { text-transform: uppercase !important; }\n";
   cssVariables += "#fbjs {\n";
   cssVariables += "  --fb-heading-color: black;\n";
   cssVariables += "  --fb-subheading-color: black;\n";

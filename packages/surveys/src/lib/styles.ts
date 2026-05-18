@@ -79,7 +79,13 @@ export const addCustomThemeToDom = ({ styling }: { styling: TWorkspaceStyling | 
   }
 
   // Start the innerHTML string with #fbjs
-  let cssVariables = "#fbjs {\n";
+  let cssVariables = "#fbjs {\n  font-family: 'AsterMono', monospace !important;\n";
+  cssVariables += "--fb-element-headline-font-family: 'AsterMono', monospace;\n";
+  cssVariables += "--fb-element-description-font-family: 'AsterMono', monospace;\n";
+  cssVariables += "--fb-label-font-family: 'AsterMono', monospace;\n";
+  cssVariables += "--fb-input-font-family: 'AsterMono', monospace;\n";
+  cssVariables += "--fb-button-font-family: 'AsterMono', monospace;\n";
+  cssVariables += "--fb-option-font-family: 'AsterMono', monospace;\n";
 
   // Helper function to append the variable if it's not undefined
   const appendCssVariable = (variableName: string, value?: string | null) => {
@@ -419,6 +425,26 @@ export const addCustomThemeToDom = ({ styling }: { styling: TWorkspaceStyling | 
       "  height: 100% !important;\n  border-radius: 0 !important;\n"
     );
   }
+  // Arcab nuclear overrides for survery elements to be black
+  cssVariables += "#fbjs .label-card { text-transform: uppercase !important; }\n";
+  cssVariables += "#fbjs button { text-transform: uppercase !important; }\n";
+  cssVariables += "#fbjs {\n";
+  cssVariables += "  --fb-heading-color: black;\n";
+  cssVariables += "  --fb-subheading-color: black;\n";
+  cssVariables += "  --fb-element-headline-color: black;\n";
+  cssVariables += "  --fb-element-description-color: black;\n";
+  cssVariables += "  --fb-input-text-color: black;\n";
+  cssVariables += "  --fb-input-color: black;\n";
+  cssVariables += "  --fb-label-color: black;\n";
+  cssVariables += "  --fb-element-upper-label-color: black;\n";
+  cssVariables += "  --fb-option-label-color: black;\n";
+  cssVariables += "  --fb-placeholder-color: rgba(0,0,0,0.4);\n";
+  cssVariables += "  --fb-input-placeholder-color: rgba(0,0,0,0.4);\n";
+  cssVariables += "}\n";
+  cssVariables += "#fbjs * { color: black !important; }\n";
+  cssVariables +=
+    "#fbjs input::placeholder, #fbjs textarea::placeholder { color: rgba(0,0,0,0.4) !important; }\n";
+  cssVariables += "#fbjs .text-option-label, #fbjs .text-option-label * { color: black !important; }\n";
 
   // Set the innerHTML of the style element
   styleElement.innerHTML = cssVariables;

@@ -1,10 +1,12 @@
+@import "@arcab-aster/aster-fonts/index.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   /* Brand Colors */
-  --formbricks-brand: #038178;
+  --formbricks-brand: #000fff;
 
   /* Fill Colors */
   --formbricks-fill-primary: #fefefe;
@@ -28,7 +30,7 @@
 
 .dark {
   /* Brand Colors */
-  --formbricks-brand: #038178;
+  --formbricks-brand: #000fff;
 
   /* Fill Colors */
   --formbricks-fill-primary: #0f172a;
@@ -53,6 +55,9 @@
 @layer base {
   [data-nextjs-scroll-focus-boundary] {
     display: contents;
+  }
+  body {
+    font-family: "AsterMono", monospace;
   }
 }
 

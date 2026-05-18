@@ -37,13 +37,13 @@ module.exports = {
       },
       colors: {
         brand: {
-          DEFAULT: "#00E6CA",
-          light: "#00E6CA",
-          dark: "#00C4B8",
+          DEFAULT: "#000FFF",
+          light: "#000FFF",
+          dark: "#000FFF",
         },
         focus: "var(--formbricks-focus, #1982fc)",
         // error: "rgb(from var(--formbricks-error) r g b / <alpha-value>)",
-        brandnew: "var(--formbricks-brand, #038178)",
+        brandnew: "var(--formbricks-brand, #000FFF)",
         primary: {
           DEFAULT: "#0f172a",
           foreground: "#fefefe",

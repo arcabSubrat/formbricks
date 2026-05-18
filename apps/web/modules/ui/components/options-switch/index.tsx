@@ -60,7 +60,7 @@ export const OptionsSwitch = ({
             e.preventDefault();
             !type.disabled && handleOptionChange(type.value);
           }}
-          className={`relative z-10 flex-grow rounded-md p-2 text-center transition-colors duration-200 ${
+          className={`relative z-10 flex-grow rounded-md p-2 text-center uppercase transition-colors duration-200 ${
             type.disabled
               ? "cursor-not-allowed opacity-50"
               : currentOption === type.value

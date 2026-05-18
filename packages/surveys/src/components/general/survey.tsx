@@ -14,7 +14,6 @@ import { TSurveyElement } from "@formbricks/types/surveys/elements";
 import { BlockConditional } from "@/components/general/block-conditional";
 import { EndingCard } from "@/components/general/ending-card";
 import { ErrorComponent } from "@/components/general/error-component";
-import { FormbricksBranding } from "@/components/general/formbricks-branding";
 import { LanguageSwitch } from "@/components/general/language-switch";
 import { ProgressBar } from "@/components/general/progress-bar";
 import { RecaptchaBranding } from "@/components/general/recaptcha-branding";
@@ -77,7 +76,6 @@ export function Survey({
   mode,
   survey,
   styling,
-  isBrandingEnabled,
   onDisplay,
   onResponse,
   onClose,
@@ -1218,7 +1216,6 @@ export function Survey({
                 "flex flex-col justify-center gap-2",
                 isCloseButtonVisible || isLanguageSwitchVisible ? "p-2" : "p-3"
               )}>
-              {isBrandingEnabled ? <FormbricksBranding /> : null}
               {isSpamProtectionEnabled ? <RecaptchaBranding /> : null}
             </div>
           </div>

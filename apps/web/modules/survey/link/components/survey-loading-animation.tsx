@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
-import Logo from "@/images/powered-by-formbricks.svg";
 import { cn } from "@/lib/cn";
 import { LoadingSpinner } from "@/modules/ui/components/loading-spinner";
 
@@ -122,13 +121,6 @@ export const SurveyLoadingAnimation = ({
           "flex flex-col items-center space-y-4",
           isReadyToTransition ? "animate-surveyExit" : "animate-surveyLoading"
         )}>
-        {isBrandingEnabled && (
-          <Image
-            src={Logo as string}
-            alt="Logo"
-            className={cn("w-32 transition-all duration-1000 md:w-40")}
-          />
-        )}
         <LoadingSpinner />
       </div>
     </div>

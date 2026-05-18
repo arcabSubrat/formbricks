@@ -13,6 +13,7 @@
 @layer theme, base, components, utilities;
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities) important;
+@import "@arcab-aster/aster-fonts/index.css";
 
 /* NOSONAR: Tailwind CSS v4 directives - @config and @source are valid at-rules */
 @config "../../tailwind.config.ts";
@@ -244,4 +245,8 @@
 
 #fbjs textarea::-webkit-scrollbar-thumb:hover {
   background-color: hsl(215.4 16.3% 46.9% / 0.5);
+}
+
+#fbjs {
+  font-family: "AsterMono", monospace;
 }

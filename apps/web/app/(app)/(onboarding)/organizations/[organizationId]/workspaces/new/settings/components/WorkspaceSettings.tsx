@@ -169,7 +169,7 @@ export const WorkspaceSettings = ({
                       <Input
                         value={field.value}
                         onChange={(name) => field.onChange(name)}
-                        placeholder="e.g. Formbricks"
+                        placeholder="e.g. arcab"
                         className="bg-white"
                         autoFocus={true}
                       />

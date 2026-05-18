@@ -48,11 +48,7 @@ export function EmailTemplate({
             fontFamily: "'Jost', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'sans-serif'",
           }}>
           <Section>
-            {isDefaultLogo ? (
-              <Link href={logoLink} target="_blank">
-                <Img data-testid="default-logo-image" alt="Logo" className="mx-auto w-60" src={fbLogoUrl} />
-              </Link>
-            ) : (
+            {!isDefaultLogo && (
               <Img
                 data-testid="logo-image"
                 alt="Logo"

@@ -1034,7 +1034,7 @@ function EmailFooter({
     <Container className="mx-auto mt-8 text-center">
       <Link
         className="text-signature-color text-xs"
-        href="https://formbricks.com?utm_source=email_branding"
+        href="https://form.arcab.co?utm_source=email_branding"
         style={{ ...getForcedColorStyle(signatureColor), fontFamily }}
         target={PREVIEW_LINK_TARGET}>
         {t("common.powered_by_formbricks")}

@@ -8,7 +8,7 @@ export function FormbricksBranding() {
         <p className="text-signature text-xs">
           {t("common.powered_by")}{" "}
           <b>
-            <span className="text-branding-text hover:text-signature">arcab form</span>
+            <span className="text-branding-text hover:text-signature">arcab Form</span>
           </b>
         </p>
       </a>

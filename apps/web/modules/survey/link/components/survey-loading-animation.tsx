@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import { cn } from "@/lib/cn";
 import { LoadingSpinner } from "@/modules/ui/components/loading-spinner";
@@ -12,7 +11,6 @@ interface SurveyLoadingAnimationProps {
 export const SurveyLoadingAnimation = ({
   isWelcomeCardEnabled,
   isBackgroundLoaded = true,
-  isBrandingEnabled,
 }: SurveyLoadingAnimationProps) => {
   const [isHidden, setIsHidden] = useState(false);
   const [minTimePassed, setMinTimePassed] = useState(false);

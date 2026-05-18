@@ -16,7 +16,7 @@ import "../modules/ui/globals.css";
 export const metadata: Metadata = {
   title: {
     template: "%s",
-    default: "arcab Form",
+    default: "arcab form",
   },
   description: "Powerful forms and surveys for modern teams.",
 };

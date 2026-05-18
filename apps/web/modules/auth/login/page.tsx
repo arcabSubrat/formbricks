@@ -30,7 +30,7 @@ import {
 import { LoginForm } from "./components/login-form";
 
 export const metadata: Metadata = {
-  title: "Login | arcab Form",
+  title: "Login | arcab form",
   description: "Open-source Experience Management. Free & open source.",
 };
 

@@ -5,7 +5,6 @@ import { TWorkspaceStyling } from "@formbricks/types/workspace";
 import { IS_FORMBRICKS_CLOUD } from "@/lib/constants";
 import { getPublicDomain } from "@/lib/getPublicUrl";
 import { getLocalizedValue } from "@/lib/i18n/utils";
-import { COLOR_DEFAULTS } from "@/lib/styling/constants";
 import { recallToHeadline } from "@/lib/utils/recall";
 import { getSurvey } from "@/modules/survey/lib/survey";
 
@@ -106,13 +105,7 @@ export const getMetadataBrandColor = (
 /**
  * Generate Open Graph metadata for survey
  */
-export const getSurveyOpenGraphMetadata = (
-  surveyId: string,
-  surveyName: string,
-  surveyBrandColor?: string
-): Metadata => {
-  const encodedName = getNameForURL(surveyName);
-  const brandColor = getBrandColorForURL(surveyBrandColor ?? COLOR_DEFAULTS.brandColor);
+export const getSurveyOpenGraphMetadata = (surveyId: string, surveyName: string): Metadata => {
   const ogImgURL = `/og-image.png`;
 
   return {

@@ -9,11 +9,7 @@ import { SurveyInactive } from "@/modules/survey/link/components/survey-inactive
 import { renderSurvey } from "@/modules/survey/link/components/survey-renderer";
 import { getExistingContactResponse } from "@/modules/survey/link/lib/data";
 import { checkAndValidateSingleUseId } from "@/modules/survey/link/lib/helper";
-import {
-  getBasicSurveyMetadata,
-  getMetadataBrandColor,
-  getSurveyOpenGraphMetadata,
-} from "@/modules/survey/link/lib/metadata-utils";
+import { getBasicSurveyMetadata, getSurveyOpenGraphMetadata } from "@/modules/survey/link/lib/metadata-utils";
 import type { TLinkSurveySearchParams } from "@/modules/survey/link/lib/types";
 import { getWorkspaceContextForLinkSurvey } from "@/modules/survey/link/lib/workspace";
 import { getWorkspaceById } from "@/modules/survey/link/lib/workspace";
@@ -47,8 +43,7 @@ export const generateMetadata = async (props: ContactSurveyPageProps): Promise<M
     const workspaceContext = await getWorkspaceContextForLinkSurvey(survey.workspaceId);
     const customFaviconUrl = workspaceContext.organizationWhitelabel?.faviconUrl;
 
-    const brandColor = getMetadataBrandColor(workspaceContext.workspace.styling, survey.styling);
-    const baseMetadata = getSurveyOpenGraphMetadata(survey.id, title, brandColor);
+    const baseMetadata = getSurveyOpenGraphMetadata(survey.id, title);
 
     // Override with the custom image URL
     if (baseMetadata.openGraph) {

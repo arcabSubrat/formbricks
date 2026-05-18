@@ -38,7 +38,7 @@ export const getBasicSurveyMetadata = async (
   if (!surveyData) {
     return {
       title: "Survey",
-      description: "Please complete this survey.",
+      description: "Take a few minutes, complete this form.",
       survey: null,
       ogImage: undefined,
     };
@@ -67,7 +67,7 @@ export const getBasicSurveyMetadata = async (
   const descriptionFromMetadata = metadata?.description
     ? getLocalizedValue(metadata.description, langCode) || ""
     : undefined;
-  let description = descriptionFromMetadata || "Please complete this survey.";
+  let description = descriptionFromMetadata || "Take a few minutes, complete this form.";
 
   // Get OG image from link metadata if available
   const ogImage = metadata?.ogImage;
@@ -113,13 +113,13 @@ export const getSurveyOpenGraphMetadata = (
 ): Metadata => {
   const encodedName = getNameForURL(surveyName);
   const brandColor = getBrandColorForURL(surveyBrandColor ?? COLOR_DEFAULTS.brandColor);
-  const ogImgURL = `/api/v1/client/og?brandColor=${brandColor}&name=${encodedName}`;
+  const ogImgURL = `/og-image.png`;
 
   return {
     metadataBase: new URL(getPublicDomain()),
     openGraph: {
       title: surveyName,
-      description: "Thanks a lot for your time 🙏",
+      description: "Take a few minutes, complete this form.",
       url: `/s/${surveyId}`,
       siteName: "",
       images: [ogImgURL],
@@ -129,7 +129,7 @@ export const getSurveyOpenGraphMetadata = (
     twitter: {
       card: "summary_large_image",
       title: surveyName,
-      description: "Thanks a lot for your time 🙏",
+      description: "Take a few minutes, complete this form.",
       images: [ogImgURL],
     },
   };

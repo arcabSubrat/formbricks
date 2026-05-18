@@ -425,6 +425,25 @@ export const addCustomThemeToDom = ({ styling }: { styling: TWorkspaceStyling | 
       "  height: 100% !important;\n  border-radius: 0 !important;\n"
     );
   }
+  // Arcab nuclear overrides for survery elements to be black
+  cssVariables += "#fbjs .label-card { text-transform: uppercase !important; }\n";
+  cssVariables += "#fbjs {\n";
+  cssVariables += "  --fb-heading-color: black;\n";
+  cssVariables += "  --fb-subheading-color: black;\n";
+  cssVariables += "  --fb-element-headline-color: black;\n";
+  cssVariables += "  --fb-element-description-color: black;\n";
+  cssVariables += "  --fb-input-text-color: black;\n";
+  cssVariables += "  --fb-input-color: black;\n";
+  cssVariables += "  --fb-label-color: black;\n";
+  cssVariables += "  --fb-element-upper-label-color: black;\n";
+  cssVariables += "  --fb-option-label-color: black;\n";
+  cssVariables += "  --fb-placeholder-color: rgba(0,0,0,0.4);\n";
+  cssVariables += "  --fb-input-placeholder-color: rgba(0,0,0,0.4);\n";
+  cssVariables += "}\n";
+  cssVariables += "#fbjs * { color: black !important; }\n";
+  cssVariables +=
+    "#fbjs input::placeholder, #fbjs textarea::placeholder { color: rgba(0,0,0,0.4) !important; }\n";
+  cssVariables += "#fbjs .text-option-label, #fbjs .text-option-label * { color: black !important; }\n";
 
   // Set the innerHTML of the style element
   styleElement.innerHTML = cssVariables;

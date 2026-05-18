@@ -26,15 +26,15 @@ export const AuthLayout = async ({ children }: { children: React.ReactNode }) =>
       <Toaster />
       <section className="relative min-h-dvh">
         <div
-          className="absolute inset-x-0 top-0 z-0 hidden h-[40vh] bg-repeat sm:block"
-          style={{ backgroundImage: "url('/images/main-login-bg.svg')", backgroundSize: "auto" }}
+          className="absolute inset-x-0 top-0 z-0 hidden h-[40vh] bg-no-repeat sm:block"
+          style={{ backgroundImage: "url('/images/login-top-bg.svg')", backgroundSize: "cover" }}
         />
         <div className="relative z-10 flex min-h-screen items-center justify-center sm:pb-[20vh]">
           {children}
         </div>
-        <div className="fixed bottom-24 left-1/2 z-10 flex h-[24px] w-[118px] -translate-x-1/2 items-center justify-center">
+        <div className="fixed bottom-24 left-1/2 z-10 flex -translate-x-1/2 items-center justify-center">
           <Image
-            src="/images/login-footer-logo.svg"
+            src="/images/login-floating-logo.svg"
             alt="arcab logo"
             className="invert-0 dark:invert"
             width={120}
